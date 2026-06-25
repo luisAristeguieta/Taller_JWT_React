@@ -40,7 +40,7 @@ function Login() {
             <h1>Log in</h1>
             <form onSubmit={manejarSubmit}>
                 <div>
-                    <label>User</label>
+                    <label>Username</label>
                     <input
                         type="text"
                         value={username}
