@@ -79,8 +79,8 @@ function Registrar() {
             </form>
 
             {/* Renderizado condicional de mensajes informativos */}
-            {error && <p>{error}</p>}
-            {exito && <p>{exito}</p>}
+            {error && <p style={{ color: "#e63946", backgroundColor: "#ffe3e3" }}>{error}</p>}
+            {exito && <p style={{ color: "#2b9348", backgroundColor: "#e8f5e9" }}>{exito}</p>}
         </div>
     );
 }

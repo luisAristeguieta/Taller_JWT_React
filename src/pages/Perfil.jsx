@@ -56,22 +56,20 @@ function Perfil() {
 
     return (
         <div>
-            <div>
-                <h2>User Profile</h2>
-                <button onClick={manejarLogout}>Log Out</button>
+            <h1>User Profile</h1>
+            
+            <div style={{ textAlign: "center", display: "flex", flexDirection: "column", gap: "0.8rem", margin: "1rem 0" }}>
+                <p style={{ fontStyle: "italic", color: "#627d98" }}>Welcome to the system secured by Spring Security</p>
+                <h2 style={{ fontSize: "1.4rem", color: "#102a43", margin: "0.5rem 0" }}>
+                    👤 {datosPerfil ? datosPerfil.username : "Loading..."}
+                </h2>
+                <span style={{ display: "inline-block", alignSelf: "center", backgroundColor: "#cbd5e1", color: "#102a43", padding: "0.25rem 0.75rem", borderRadius: "20px", fontSize: "0.85rem", fontWeight: "600" }}>
+                    Role: {datosPerfil ? datosPerfil.rol : "..."}
+                </span>
+                <p style={{ color: "#2b9348", fontWeight: "600" }}>✓ Successfully Authenticated</p>
             </div>
 
-            {error && <p>{error}</p>} {/* Renderizado condicional*/}
-
-            {datosPerfil && (
-                <div>
-                    <p>{datosPerfil.Mensaje}</p>
-                    <p>{datosPerfil.Usuario}</p>
-                    <p>{datosPerfil.rol_detectado}</p>
-                    <p>{datosPerfil.status}</p>
-                </div>
-            )}
-
+            <button onClick={logout} style={{ backgroundColor: "#e63946" }}>Log Out</button>
         </div>
     )
 
